@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+  <html>
+
+  <head>
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+
+
+
+    <title>ajax获取json测试</title>
+    </head>
+    <body>
+      <div id="a"></div>
+      <script>
+    $.getJSON("ceshi.json", "", function(data) {　 //each循环 使用$.each方法遍历返回的数据date
+      $.each(data.first, function(i, item) {
+        var str = '<br/><div>姓名:' + item.name + '性别：' + item.sex + '</div>';
+        $("#a").append(str);
+      })
+    });
+    </script>
+    </body>
+
+    </html>
